@@ -1,39 +1,31 @@
 package engine;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Setter;
+import lombok.Getter;
 
+
+@Setter
+@Getter
 public class Quiz {
+
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private int id;
+
     private String title;
+
     private String text;
-    String[] options;
 
+    private String[] options;
 
-    Quiz(String title, String text, String[] options) {
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private int answer;
+
+    public Quiz(){}
+
+    public Quiz(String title, String text, String[] options) {
         this.title = title;
         this.text = text;
         this.options = options;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public String[] getOptions() {
-        return options;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public void setOptions(String[] options) {
-        this.options = options;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 }

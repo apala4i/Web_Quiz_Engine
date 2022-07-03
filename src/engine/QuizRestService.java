@@ -1,32 +1,46 @@
 package engine;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/quizzes")
 public class QuizRestService {
 
-    private Quiz quiz = new Quiz("name question",
-            "What is my name?", new String[]{"David", "Peter", "Semen", "Alex"});
+    private final QuizStorage quizStorage;
 
-    private int correctAnswerIndex = 2;
-
-    @GetMapping("/quiz")
-    public Quiz getQuiz() {
-        return quiz;
+    @Autowired
+    public QuizRestService(QuizStorage quizStorage) {
+        this.quizStorage = quizStorage;
     }
 
-    @PostMapping("/quiz")
-    public Response solveQuiz(@RequestParam int answer) {
-        if (answer == correctAnswerIndex) {
+    @PostMapping
+    public Quiz addQuiz(@RequestBody Quiz quiz) {
+        return quizStorage.addQuiz(quiz);
+    }
+
+    @GetMapping("/{id}")
+    public Quiz getQuizById(@PathVariable int id) {
+        return quizStorage.getQuizByIndex(id);
+    }
+
+    @GetMapping
+    public List<Quiz> getAllQuizzes() {
+        return quizStorage.getAllQuizzes();
+    }
+
+    @PostMapping("/{id}/solve")
+    public Response solveQuiz(@PathVariable int id, @RequestParam int answer) {
+        int writeAnswer = quizStorage.getQuizByIndex(id).getAnswer();
+
+        if (answer == writeAnswer) {
             return Response.correct();
         } else {
             return Response.incorrect();
         }
     }
+
+
 
 }
