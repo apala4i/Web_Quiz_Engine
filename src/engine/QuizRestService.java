@@ -1,8 +1,13 @@
 package engine;
 
+import lombok.Data;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
 import java.util.List;
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/quizzes")
@@ -16,7 +21,7 @@ public class QuizRestService {
     }
 
     @PostMapping
-    public Quiz addQuiz(@RequestBody Quiz quiz) {
+    public Quiz addQuiz(@RequestBody @Valid Quiz quiz) {
         return quizStorage.addQuiz(quiz);
     }
 
@@ -31,14 +36,19 @@ public class QuizRestService {
     }
 
     @PostMapping("/{id}/solve")
-    public Response solveQuiz(@PathVariable int id, @RequestParam int answer) {
-        int writeAnswer = quizStorage.getQuizByIndex(id).getAnswer();
+    public Response solveQuiz(@PathVariable int id, @RequestBody Answer answer) {
+        var writeAnswer = quizStorage.getQuizByIndex(id).getAnswer();
 
-        if (answer == writeAnswer) {
+        if (Arrays.equals(writeAnswer, answer.getAnswer())) {
             return Response.correct();
         } else {
             return Response.incorrect();
         }
+    }
+
+    @Data
+    static class Answer {
+        private int [] answer;
     }
 
 
