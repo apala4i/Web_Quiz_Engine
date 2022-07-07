@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.WebQuizEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-04T13:22:47" hostname="super-chel" time="2.884">
+<testsuite name="tests.WebQuizEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-07T17:16:07" hostname="super-chel" time="7.53">
   <properties/>
-  <testcase name="start" classname="tests.WebQuizEngineTest" time="2.884"/>
+  <testcase name="start" classname="tests.WebQuizEngineTest" time="7.53"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,252 +13,650 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2022-07-04 16:22:47.480  INFO 21107 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.3 on super-chel with PID 21107 (started by chel in /home/chel/scratch/Web Quiz Engine/Web Quiz Engine/task)
-2022-07-04 16:22:47.482  INFO 21107 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
-2022-07-04 16:22:48.344  INFO 21107 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-2022-07-04 16:22:48.352  INFO 21107 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-04 16:22:48.353  INFO 21107 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-07-04 16:22:48.404  INFO 21107 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-04 16:22:48.404  INFO 21107 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 887 ms
-2022-07-04 16:22:48.912  INFO 21107 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-07-04 16:22:48.939  INFO 21107 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-2022-07-04 16:22:48.952  INFO 21107 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 1.743 seconds (JVM running for 2.293)
-2022-07-04 16:22:49.166  INFO 21107 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-04 16:22:49.166  INFO 21107 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-04 16:22:49.168  INFO 21107 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-07-07 20:16:08.194  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.3 on super-chel with PID 98596 (started by chel in /home/chel/scratch/Web Quiz Engine/Web Quiz Engine/task)
+2022-07-07 20:16:08.197  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+2022-07-07 20:16:08.928  INFO 98596 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-07 20:16:08.962  INFO 98596 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+2022-07-07 20:16:09.376  INFO 98596 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-07 20:16:09.385  INFO 98596 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 20:16:09.385  INFO 98596 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-07-07 20:16:09.448  INFO 98596 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 20:16:09.448  INFO 98596 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1209 ms
+2022-07-07 20:16:09.567  INFO 98596 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-07 20:16:09.702  INFO 98596 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-07 20:16:09.710  INFO 98596 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+2022-07-07 20:16:09.835  INFO 98596 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-07 20:16:09.869  INFO 98596 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-07-07 20:16:09.975  INFO 98596 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-07 20:16:10.048  INFO 98596 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: create table quiz (id bigint not null, text varchar(255) not null, title varchar(255) not null, primary key (id))
+Hibernate: create table quiz_answer (quiz_id bigint not null, answer integer)
+Hibernate: create table quiz_options (quiz_id bigint not null, options varchar(255))
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: alter table quiz_answer add constraint FKoxi2td1x8cc3y4a0vlsg2hfnc foreign key (quiz_id) references quiz
+Hibernate: alter table quiz_options add constraint FKsx28j7orq6asg17veq9nblhw8 foreign key (quiz_id) references quiz
+2022-07-07 20:16:10.535  INFO 98596 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-07 20:16:10.541  INFO 98596 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-07 20:16:10.736  WARN 98596 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-07 20:16:11.106  INFO 98596 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-07 20:16:11.134  INFO 98596 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2022-07-07 20:16:11.146  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 3.217 seconds (JVM running for 3.743)
+2022-07-07 20:16:11.425  INFO 98596 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 20:16:11.425  INFO 98596 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 20:16:11.427  INFO 98596 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
 ?[1;31m
 Start test 2?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 3?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 4?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 5?[0m
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 6?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 7?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 8?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 9?[0m
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 10?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 11?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 12?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 13?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 14?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 15?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 16?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 17?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 18?[0m
-2022-07-04 16:22:49.442  WARN 21107 --- [nio-8889-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 4, column: 4]]
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 19?[0m
-2022-07-04 16:22:49.450  WARN 21107 --- [nio-8889-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
+2022-07-07 20:16:12.440  INFO 98596 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-07 20:16:12.442  INFO 98596 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-07 20:16:12.492  INFO 98596 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
+
+2022-07-07 20:16:12.536  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.3 on super-chel with PID 98596 (started by chel in /home/chel/scratch/Web Quiz Engine/Web Quiz Engine/task)
+2022-07-07 20:16:12.536  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+2022-07-07 20:16:12.770  INFO 98596 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-07 20:16:12.773  INFO 98596 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2022-07-07 20:16:12.840  INFO 98596 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-07 20:16:12.841  INFO 98596 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 20:16:12.841  INFO 98596 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-07-07 20:16:12.853  INFO 98596 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 20:16:12.853  INFO 98596 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 315 ms
+2022-07-07 20:16:12.889  INFO 98596 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-07-07 20:16:12.895  INFO 98596 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-07-07 20:16:12.895  INFO 98596 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+2022-07-07 20:16:12.927  INFO 98596 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-07 20:16:12.930  INFO 98596 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-07 20:16:12.987  INFO 98596 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-07 20:16:12.987  INFO 98596 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-07 20:16:13.037  WARN 98596 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-07 20:16:13.183  INFO 98596 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-07 20:16:13.195  INFO 98596 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2022-07-07 20:16:13.201  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 0.683 seconds (JVM running for 5.798)
 ?[1;31m
 Start test 20?[0m
-2022-07-04 16:22:49.456  WARN 21107 --- [io-8889-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 4, column: 4]]
+2022-07-07 20:16:13.211  INFO 98596 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 20:16:13.211  INFO 98596 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 20:16:13.213  INFO 98596 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 21?[0m
-2022-07-04 16:22:49.462  WARN 21107 --- [nio-8889-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 22?[0m
-2022-07-04 16:22:49.480  WARN 21107 --- [nio-8889-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public engine.Quiz engine.QuizRestService.addQuiz(engine.Quiz): [Field error in object 'quiz' on field 'options': rejected value [null]; codes [NotNull.quiz.options,NotNull.options,NotNull.[Ljava.lang.String;,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [quiz.options,options]; arguments []; default message [options]]; default message [must not be null]] ]
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 23?[0m
-2022-07-04 16:22:49.486  WARN 21107 --- [nio-8889-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 24?[0m
-2022-07-04 16:22:49.492  WARN 21107 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 25?[0m
+2022-07-07 20:16:13.276  WARN 98596 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 4, column: 4]]
 ?[1;31m
 Start test 26?[0m
+2022-07-07 20:16:13.285  WARN 98596 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 27?[0m
+2022-07-07 20:16:13.291  WARN 98596 --- [nio-8889-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 4, column: 4]]
 ?[1;31m
 Start test 28?[0m
+2022-07-07 20:16:13.298  WARN 98596 --- [nio-8889-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 29?[0m
+2022-07-07 20:16:13.322  WARN 98596 --- [io-8889-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public engine.businesslayer.Quiz engine.presentationlayer.QuizRestController.addQuiz(engine.businesslayer.Quiz): [Field error in object 'quiz' on field 'options': rejected value [null]; codes [NotNull.quiz.options,NotNull.options,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [quiz.options,options]; arguments []; default message [options]]; default message [must not be null]] ]
 ?[1;31m
 Start test 30?[0m
+2022-07-07 20:16:13.329  WARN 98596 --- [nio-8889-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 31?[0m
+2022-07-07 20:16:13.334  WARN 98596 --- [nio-8889-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries<LF> at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 32?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 33?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 34?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 35?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 36?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 37?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 38?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 39?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 40?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 41?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 42?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 43?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 44?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 45?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 46?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 47?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 48?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 49?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 50?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 51?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 52?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 53?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 54?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 55?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 56?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 57?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 58?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 59?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 60?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 61?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 62?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 63?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 64?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 65?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 66?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 67?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 68?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 69?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 70?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 71?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 72?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 73?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 74?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 75?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 76?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 77?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 78?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 79?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 80?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 81?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 82?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 83?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 84?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 85?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 86?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 87?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 88?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 89?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 90?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 91?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 92?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 93?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 94?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 95?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 96?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 97?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 98?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 99?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 100?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 101?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 102?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 103?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 104?[0m
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quiz (text, title, id) values (?, ?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_answer (quiz_id, answer) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
+Hibernate: insert into quiz_options (quiz_id, options) values (?, ?)
 ?[1;31m
 Start test 105?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
 ?[1;31m
 Start test 106?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 107?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 108?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 109?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 110?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 111?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 112?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 113?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ?[1;31m
 Start test 114?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 115?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 116?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 117?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 118?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 119?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 120?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 121?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 122?[0m
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+?[1;31m
+Start test 123?[0m
+2022-07-07 20:16:14.542  INFO 98596 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-07 20:16:14.544  INFO 98596 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-07-07 20:16:14.591  INFO 98596 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
+
+2022-07-07 20:16:14.647  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.3 on super-chel with PID 98596 (started by chel in /home/chel/scratch/Web Quiz Engine/Web Quiz Engine/task)
+2022-07-07 20:16:14.647  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+2022-07-07 20:16:14.813  INFO 98596 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-07 20:16:14.816  INFO 98596 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2022-07-07 20:16:14.882  INFO 98596 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-07 20:16:14.883  INFO 98596 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 20:16:14.883  INFO 98596 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-07-07 20:16:14.896  INFO 98596 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 20:16:14.896  INFO 98596 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 246 ms
+2022-07-07 20:16:14.940  INFO 98596 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-07-07 20:16:14.946  INFO 98596 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-07-07 20:16:14.946  INFO 98596 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+2022-07-07 20:16:14.980  INFO 98596 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-07 20:16:14.983  INFO 98596 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-07 20:16:15.045  INFO 98596 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-07 20:16:15.045  INFO 98596 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-07 20:16:15.095  WARN 98596 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-07 20:16:15.220  INFO 98596 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-07 20:16:15.230  INFO 98596 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2022-07-07 20:16:15.236  INFO 98596 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 0.604 seconds (JVM running for 7.833)
+?[1;31m
+Start test 124?[0m
+2022-07-07 20:16:15.241  INFO 98596 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 20:16:15.241  INFO 98596 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 20:16:15.242  INFO 98596 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select quiz0_.id as id1_0_, quiz0_.text as text2_0_, quiz0_.title as title3_0_ from quiz quiz0_
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+Hibernate: select options0_.quiz_id as quiz_id1_2_0_, options0_.options as options2_2_0_ from quiz_options options0_ where options0_.quiz_id=?
+?[1;31m
+Start test 125?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 126?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 127?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
+?[1;31m
+Start test 128?[0m
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.text as text2_0_0_, quiz0_.title as title3_0_0_ from quiz quiz0_ where quiz0_.id=?
+Hibernate: select answer0_.quiz_id as quiz_id1_1_0_, answer0_.answer as answer2_1_0_ from quiz_answer answer0_ where answer0_.quiz_id=?
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
