@@ -28,8 +28,16 @@ public class QuizService {
         }
     }
 
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
+
     public Quiz addQuiz(Quiz quiz) {
         return repository.save(quiz);
+    }
+
+    public boolean existsById(Long id) {
+        return repository.existsById(id);
     }
 
     public List<Quiz> getAllQuizzes() {
