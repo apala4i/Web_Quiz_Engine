@@ -1,7 +1,11 @@
 package engine.businesslayer;
 
+import engine.persistencelayer.PagingQuizRep;
 import engine.persistencelayer.QuizCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Entity;
@@ -14,9 +18,12 @@ public class QuizService {
 
     private final QuizCrudRepository repository;
 
+    private final PagingQuizRep pagingQuizRep;
+
     @Autowired
-    public QuizService(QuizCrudRepository repository) {
+    public QuizService(QuizCrudRepository repository, PagingQuizRep pagingQuizRep) {
         this.repository = repository;
+        this.pagingQuizRep = pagingQuizRep;
     }
 
     public Quiz getQuizByIndex(Long index) {
@@ -38,6 +45,11 @@ public class QuizService {
 
     public boolean existsById(Long id) {
         return repository.existsById(id);
+    }
+
+    public Page<Quiz> getAllQuizzes(Integer pageNo, Integer pageSize, String sortBy) {
+        var pageable = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
+        return pagingQuizRep.findAll(pageable);
     }
 
     public List<Quiz> getAllQuizzes() {

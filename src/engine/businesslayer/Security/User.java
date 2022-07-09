@@ -8,6 +8,7 @@ import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import engine.businesslayer.QuizCompletion;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
@@ -34,7 +35,16 @@ public class User {
     @JsonIgnore
     private Set<Long> quizIds = new HashSet<>();
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private List<QuizCompletion> completions = new ArrayList<>();
+
     @Transient
     @JsonIgnore // not used now
     private List<String> role = new ArrayList<>();
+
+    public void addCompletion(Long quizId) {
+        completions.add(new QuizCompletion(quizId));
+    }
+
 }

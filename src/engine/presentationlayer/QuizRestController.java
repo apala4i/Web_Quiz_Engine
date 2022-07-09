@@ -1,14 +1,16 @@
 package engine.presentationlayer;
 
-import engine.businesslayer.Quiz;
-import engine.businesslayer.QuizService;
-import engine.businesslayer.Response;
+import engine.businesslayer.*;
 import engine.businesslayer.Security.User;
 import engine.businesslayer.Security.UserDetailsImpl;
 import engine.businesslayer.Security.UserDetailsServiceImpl;
 import engine.businesslayer.Security.UserService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -30,13 +32,19 @@ public class QuizRestController {
 
     private final UserService userService;
 
+    private final QuizCompletionService quizCompletionService;
+
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public QuizRestController(QuizService quizService, UserService userService, PasswordEncoder passwordEncoder) {
+    public QuizRestController(QuizService quizService,
+                              UserService userService,
+                              PasswordEncoder passwordEncoder,
+                              QuizCompletionService quizCompletionService) {
         this.quizService = quizService;
         this.userService = userService;
         this.passwordEncoder = passwordEncoder;
+        this.quizCompletionService = quizCompletionService;
     }
 
     @PostMapping("/quizzes")
@@ -56,17 +64,34 @@ public class QuizRestController {
         return quizService.getQuizByIndex(id);
     }
 
+    @GetMapping("/quizzes/completed")
+    public Page<QuizCompletion> getQuizCompletions(@AuthenticationPrincipal UserDetailsImpl userDetails,
+                                                   @RequestParam(defaultValue = "0") Integer page,
+                                                   @RequestParam(defaultValue = "10") Integer pageSize,
+                                                   @RequestParam(defaultValue = "completed_at") String sortBy) {
+        return quizCompletionService.findByUserId(PageRequest.of(page, pageSize, Sort.by(sortBy).descending()),
+                userDetails.getUsername());
+    }
+
     @GetMapping("/quizzes")
-    public List<Quiz> getAllQuizzes() {
-        return quizService.getAllQuizzes();
+    public Page<Quiz> getAllQuizzes(
+            @RequestParam(defaultValue = "0") Integer page,
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "id") String sortBy) {
+        return quizService.getAllQuizzes(page, pageSize, sortBy);
     }
 
     @PostMapping("/quizzes/{id}/solve")
-    public Response solveQuiz(@PathVariable long id, @RequestBody Answer answer) {
+    public Response solveQuiz(@PathVariable long id,
+                              @RequestBody Answer answer,
+                              @AuthenticationPrincipal UserDetailsImpl userDetails) {
         var rightAnswer = List.copyOf(quizService.getQuizByIndex(id).getAnswer());
         var checkAnswer = answer.getAnswer() != null ? answer.getAnswer() : List.of();
 
         if (rightAnswer.equals(checkAnswer)) {
+            User user = userService.findById(userDetails.getUsername()).get();
+            user.addCompletion(id);
+            userService.save(user);
             return Response.correct();
         } else {
             return Response.incorrect();

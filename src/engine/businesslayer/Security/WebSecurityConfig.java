@@ -27,11 +27,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity security) throws Exception {
         security.authorizeRequests()
+//                .mvcMatchers("/**").permitAll() // access to all for testing
                 .mvcMatchers(HttpMethod.POST, "/actuator/shutdown", "/api/register").permitAll()
                 .mvcMatchers("/**").authenticated()
                 .and()
                 .csrf().disable()
-                .httpBasic();
+                .httpBasic().and()
+                .formLogin();
 
     }
 
